@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = 'utf-8'>
+ 		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type = 'text/javascript' src = 'main.js'></script>
+		<link rel ='stylesheet' type = 'text/css' href = 'sudostyle.css' >
+
+	</head>
+	<body>
+		<h1>SUDOKU SOLVER</h1>
+		<div class = 'container'>
+			<div class = 'block'>
+				<div class = 'case' id='00'>0</div>
+				<div class = 'case' id='01'>0</div>
+				<div class = 'case' id='02'>0</div>
+				<div class = 'case' id='10'>0</div>
+				<div class = 'case' id='11'>0</div>
+				<div class = 'case' id='12'>0</div>
+				<div class = 'case' id='20'>0</div>
+				<div class = 'case' id='21'>0</div>
+				<div class = 'case' id='22'>0</div>
+			</div>
+			<div class = 'block'>
+				<div class = 'case' id='03'>0</div>
+				<div class = 'case' id='04'>0</div>
+				<div class = 'case' id='05'>0</div>
+				<div class = 'case' id='13'>0</div>
+				<div class = 'case' id='14'>0</div>
+				<div class = 'case' id='15'>0</div>
+				<div class = 'case' id='23'>0</div>
+				<div class = 'case' id='24'>0</div>
+				<div class = 'case' id='25'>0</div>
+			</div>
+			<div class = 'block'>
+				<div class = 'case' id='06'>0</div>
+				<div class = 'case' id='07'>0</div>
+				<div class = 'case' id='08'>0</div>
+				<div class = 'case' id='16'>0</div>
+				<div class = 'case' id='17'>0</div>
+				<div class = 'case' id='18'>0</div>
+				<div class = 'case' id='26'>0</div>
+				<div class = 'case' id='27'>0</div>
+				<div class = 'case' id='28'>0</div>
+			</div>
+			<div class = 'block'>
+				<div class = 'case' id='30'>0</div>
+				<div class = 'case' id='31'>0</div>
+				<div class = 'case' id='32'>0</div>
+				<div class = 'case' id='40'>0</div>
+				<div class = 'case' id='41'>0</div>
+				<div class = 'case' id='42'>0</div>
+				<div class = 'case' id='50'>0</div>
+				<div class = 'case' id='51'>0</div>
+				<div class = 'case' id='52'>0</div>
+			</div>
+			<div class = 'block'>
+				<div class = 'case' id='33'>0</div>
+				<div class = 'case' id='34'>0</div>
+				<div class = 'case' id='35'>0</div>
+				<div class = 'case' id='43'>0</div>
+				<div class = 'case' id='44'>0</div>
+				<div class = 'case' id='45'>0</div>
+				<div class = 'case' id='53'>0</div>
+				<div class = 'case' id='54'>0</div>
+				<div class = 'case' id='55'>0</div>
+			</div>
+			<div class = 'block'>
+				<div class = 'case' id='36'>0</div>
+				<div class = 'case' id='37'>0</div>
+				<div class = 'case' id='38'>0</div>
+				<div class = 'case' id='46'>0</div>
+				<div class = 'case' id='47'>0</div>
+				<div class = 'case' id='48'>0</div>
+				<div class = 'case' id='56'>0</div>
+				<div class = 'case' id='57'>0</div>
+				<div class = 'case' id='58'>0</div>
+			</div>
+			<div class = 'block'>
+				<div class = 'case' id='60'>0</div>
+				<div class = 'case' id='61'>0</div>
+				<div class = 'case' id='62'>0</div>
+				<div class = 'case' id='70'>0</div>
+				<div class = 'case' id='71'>0</div>
+				<div class = 'case' id='72'>0</div>
+				<div class = 'case' id='80'>0</div>
+				<div class = 'case' id='81'>0</div>
+				<div class = 'case' id='82'>0</div>
+			</div>
+			<div class = 'block'>
+				<div class = 'case' id='63'>0</div>
+				<div class = 'case' id='64'>0</div>
+				<div class = 'case' id='65'>0</div>
+				<div class = 'case' id='73'>0</div>
+				<div class = 'case' id='74'>0</div>
+				<div class = 'case' id='75'>0</div>
+				<div class = 'case' id='83'>0</div>
+				<div class = 'case' id='84'>0</div>
+				<div class = 'case' id='85'>0</div>
+			</div>
+			<div class = 'block'>
+				<div class = 'case' id='66'>0</div>
+				<div class = 'case' id='67'>0</div>
+				<div class = 'case' id='68'>0</div>
+				<div class = 'case' id='76'>0</div>
+				<div class = 'case' id='77'>0</div>
+				<div class = 'case' id='78'>0</div>
+				<div class = 'case' id='86'>0</div>
+				<div class = 'case' id='87'>0</div>
+				<div class = 'case' id='88'>0</div>
+			</div>
+		</div>
+		<div class = 'selector-container'>
+			<div class = 'selector' id ='0'>0</div>
+			<div class = 'selector' id ='1'>1</div>
+			<div class = 'selector' id ='2'>2</div>
+			<div class = 'selector' id ='3'>3</div>
+			<div class = 'selector' id ='4'>4</div>
+			<div class = 'selector' id ='5'>5</div>
+			<div class = 'selector' id ='6'>6</div>
+			<div class = 'selector' id ='7'>7</div>
+			<div class = 'selector' id ='8'>8</div>
+			<div class = 'selector' id ='9'>9</div>
+		</div>
+		<button>solve it</button>
+	</body>
+</html>
